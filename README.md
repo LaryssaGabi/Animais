@@ -1,4 +1,4 @@
-# Animais
+# Simulação virtual
 Esse codigo é uma simulação de bichinho virtual. No qual se cria um bichinho virtual com algumas características e que possui um estado inicial. Depois que “nascer”, ele poderá executar quatro ações: comer, dormir, correr e morrer. O jogo só termina quando o bichinho morrer, encerrando o programa.
 
  Seja um conjunto de animais que possui as características comuns: nome, classe, família, idade, estado (vivo = true e morto = false), caloria (0 a 100) e força (0 a 100). Estes animais podem fazer as seguintes ações:
