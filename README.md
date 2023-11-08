@@ -1,14 +1,49 @@
-# Simulação virtual
-Esse codigo é uma simulação de bichinho virtual. No qual se cria um bichinho virtual com algumas características e que possui um estado inicial. Depois que “nascer”, ele poderá executar quatro ações: comer, dormir, correr e morrer. O jogo só termina quando o bichinho morrer, encerrando o programa.
+# Programa de Gerenciamento de Animais
+Este é um programa Java que permite ao usuário criar e gerenciar animais virtuais, dando-lhes nome, classe, família e idade. Os animais virtuais podem realizar ações como comer, correr, dormir e morrer. O programa utiliza a classe Animais para representar os animais virtuais e oferece um menu interativo para o usuário interagir com o animal.
 
- Seja um conjunto de animais que possui as características comuns: nome, classe, família, idade, estado (vivo = true e morto = false), caloria (0 a 100) e força (0 a 100). Estes animais podem fazer as seguintes ações:
+## Visão Geral
+O programa consiste em duas classes principais: `App` e `Animais`.
 
-* nascer: pergunta os dados do animal (nome, classe e família). O animal recebe 10 de força e caloria, 0 na idade e true como estado;
+### Classe Animais
+A classe Animais é usada para representar os animais virtuais. Cada animal tem os seguintes atributos:
 
-* morrer: coloca 0 na força e false como estado;
+* `nome`: Nome do animal.
+* `classe`: Classe do animal (exemplo: gato, cachorro, etc.).
+* `familia`: Família do animal.
+* `idade`: Idade do animal.
+* `estado`: Indica se o animal está vivo (true) ou morto (false).
+* `peso`: Peso do animal (varia de 0 a 100).
+* `forca`: Força do animal (varia de 0 a 100).
 
-* comer: caso o animal não esteja cheio e/ou morto, insere 10 no estado caloria e retira 2 de força;
+A classe Animais possui dois construtores. O primeiro construtor permite a inicialização de todos os atributos do animal, enquanto o segundo construtor permite a inicialização de alguns atributos com valores padrão.
 
-* correr: caso o animal não esteja morto ou exausto (caloria = 0), retira 5 do estado força e 5 do estado caloria;
+A classe `Animais` também oferece métodos para acessar os atributos do animal e implementa os seguintes métodos:
 
-* dormir: caso o animal não esteja morto, insere 10 no estado força e retira 2 do estado caloria.
+* `nasceu()`: Retorna uma descrição do animal, incluindo seu nome, classe, família, força, calorias e idade.
+* `morrer()`: Define o estado do animal como morto (false) e zera sua força.
+* `comer()`: Aumenta o peso do animal em 10 e diminui sua força em 2.
+* `correr()`: Diminui a força e o peso do animal em 5.
+* `dormir()`: Aumenta a força do animal em 10 e diminui seu peso em 2.
+
+### Classe App
+
+A classe `App` contém o método `main` que é o ponto de entrada do programa. Ela permite que o usuário crie um novo animal virtual, defina suas características iniciais e interaja com o animal por meio de um menu interativo. O menu oferece as seguintes opções:
+
+1. Comer
+2. Correr
+3. Dormir
+4. Morrer
+O programa valida a entrada do usuário e executa a ação escolhida no animal virtual. O usuário pode interagir com o animal até que escolha a opção "Morrer", momento em que o programa exibe "GAME OVER!".
+
+## Utilização
+Para executar o programa, siga estas etapas:
+
+1. Compile o código Java.
+2. Execute a classe `App` para iniciar o programa.
+3. Siga as instruções no console para criar um novo animal virtual e interagir com ele. 
+
+Certifique-se de fornecer valores válidos ao criar o animal e durante as interações para evitar erros.
+
+## Conclusão
+
+Este programa Java permite ao usuário criar e gerenciar animais virtuais, oferecendo a capacidade de definir suas características e interagir com eles. É um exemplo simples de programação orientada a objetos e interação com o usuário em Java.
